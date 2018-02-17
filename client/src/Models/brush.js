@@ -16,6 +16,13 @@ class Brush{
         
         this.context.stroke();
     }
+
+    drawLine(sX, sY, eX, eY){
+        this.context.beginPath();
+        this.context.moveTo(sX, sY);
+        this.lineTo(eX, eY);
+        this.context.stroke();
+    }
 }
 
 export default Brush;
