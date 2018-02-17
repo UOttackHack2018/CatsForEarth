@@ -8,8 +8,8 @@ var Schema = mongoose.Schema;
 var userSchema = new Schema({
   username: String,
   password: String,
-  cats: [{ headId: Number, earsId: Number }],
-  activities: [{ location: String, type: String, time: String, duration: Number, points: Number }],
+  cats: [{ headId: Number, earsId: Number, name: String }],
+  activities: [{ location: String, activityType: String, time: String, duration: Number, points: Number }],
   points: Number
 });
 
