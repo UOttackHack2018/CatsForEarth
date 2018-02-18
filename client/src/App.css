@@ -12,6 +12,12 @@
   display: flex;
 }
 
+header.App-header h1 {
+  color: #222;
+  font-weight: bold;
+  font-size: 4em;
+}
+
 .menu-margin {
   transition: 0.5s;
   margin-left: 250px;

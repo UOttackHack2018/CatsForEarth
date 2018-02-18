@@ -38,9 +38,8 @@ class App extends Component {
               </button>
             </div>
 
-            
-            <h1>Building a greener city.</h1>
-            <h1>With cats.</h1>
+            <h1>CATS FOR EARTH</h1>
+            <h3>Building a greener city. With cats.</h3>
           </header>
           <span className="anchor" id="home-section"></span>
           <Home/>
