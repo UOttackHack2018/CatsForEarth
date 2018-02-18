@@ -7,3 +7,5 @@ class Nose extends BodyParts {
         this.color;
     }
 }
+
+export default Nose;

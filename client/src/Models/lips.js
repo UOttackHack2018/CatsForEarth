@@ -7,3 +7,5 @@ class Lips extends BodyParts{
         this.color;
     }
 }
+
+export default Lips;
