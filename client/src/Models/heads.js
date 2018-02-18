@@ -1,8 +1,9 @@
-class Heads {
-    constructor(headType,height, width, color) {
-        this.headType = headType;
-        this.height = height;
-        this.width = width;
-        this.color = color;
+class Heads extends BodyParts {
+    constructor(type) {
+        super();
+        this.type = type;
+        this.height;
+        this.width;
+        this.color;
     }
 } 
