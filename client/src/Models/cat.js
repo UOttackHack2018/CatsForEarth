@@ -1,6 +1,7 @@
 import Eyes from './eyes'
 import Lips from './lips';
 import Head from './head';
+import Mouth from './mouth';
 import Nose from './nose';
 import Ears from './ear';
 
@@ -20,9 +21,11 @@ class Cat{
         this.eyes = new Eyes(this.rarity);
         this.head = new Head(this.rarity);
         this.mouth = new Mouth(this.rarity);
-        this.lips = new Mouth(this.rarity);
+        this.lips = new Lips(this.rarity);
         this.ears = new Ears(this.rarity);
     }
+
+    
 }
 
 

@@ -3,9 +3,10 @@ import Triangle from './triangle';
 import Circle from './circle';
 
 class BodyParts{
-    constuctor(rarity){
-        this.shape;
+    constuctor(rarity, bodyPart){
         this.rarity = rarity;
+        this.shape;
+        this.color;
         this.setProperties();
     }
 
@@ -15,7 +16,8 @@ class BodyParts{
 
     setProperties(){
         if(this.rarity == 'rare'){
-            this.shape = new Square()
+            this.shape = new Square([100, 100], 60);
+            this.color = "#56123f";
         }
         else if(this.rarity == "moderate"){
             if(this.genNum() < 0.5)

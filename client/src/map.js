@@ -38,15 +38,14 @@ class Map extends Component {
      tiles.forEach((tile) => {
        let isInside = tile.isInside(x, y);
        if(isInside){
-         req.get('http://localhost:3001/activities/getActivities', (response) => {
+         req.get('http://10.196.10.220:3001/activities/getActivities', (response) => {
            console.log(response);
          });
          return;
        }
      });
 
-    let catGenerator = new CatGenerator();
-    catGenerator.generateCat(1);
+    
 
     console.log(x ,y);
   }
@@ -58,16 +57,20 @@ class Map extends Component {
     rect = canvas.getBoundingClientRect();
 
     let brush = new Brush(ctx);
-    //let mapGenerator = new MapGenerator();
-    let mapGenerator = new SquareMapGenerator();
 
-    tiles = mapGenerator.tiles;
+    let catGenerator = new CatGenerator();
+    catGenerator.generateCat(1);
 
-    tiles.forEach(element => {
-      //brush.drawHex(element);
-      brush.drawRect(element._center[0], element._center[1],
-                      element._edgeLength, element._edgeLength);
-    });
+    //let mapGenerator = new HexMapGenerator();
+    //let mapGenerator = new SquareMapGenerator();
+
+    // tiles = mapGenerator.tiles;
+
+    // tiles.forEach(element => {
+    //   //brush.drawHex(element);
+    //   brush.drawRect(element._center[0], element._center[1],
+    //                   element._edgeLength, element._edgeLength);
+    // });
 
   }
 
