@@ -1,11 +1,9 @@
 import Hexagon from '../Models/hexagon';
-import hexagon from '../Models/hexagon';
 
-
-class MapGenerator{
+class HexMapGenerator{
     constructor(){
         this.edgeLength = 60;
-        this.hexagons = this.getHexagons();
+        this.tiles = this.getHexagons();
         //this.hexagons = this.generate();
     }
 
@@ -35,4 +33,4 @@ class MapGenerator{
     };
 }
 
-export default MapGenerator;
+export default HexMapGenerator;

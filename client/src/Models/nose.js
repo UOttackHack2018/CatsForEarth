@@ -1,3 +1,5 @@
+import BodyParts from './bodyParts'
+
 class Nose extends BodyParts {
     constructor(type) {
         super();
@@ -7,3 +9,5 @@ class Nose extends BodyParts {
         this.color;
     }
 }
+
+export default Nose;
