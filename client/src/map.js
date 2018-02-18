@@ -9,13 +9,13 @@ class Map extends Component {
 }
   updateCanvas() {
     const ctx = this.refs.canvas.getContext('2d');
-    let brush = new Brush(this.context);
-      let mapGenerator = new MapGenerator();
+    let brush = new Brush(ctx);
+    let mapGenerator = new MapGenerator();
 
-      mapGenerator.hexagons.forEach(element => {
-        brush.drawHex(element);
-      });
-      //brush.drawRect(100, 100, 50 , 50);
+    mapGenerator.hexagons.forEach(element => {
+      brush.drawHex(element);
+    });
+    //brush.drawRect(100, 100, 50 , 50);
 
   }
 
