@@ -2,7 +2,8 @@ import Shape from './shape';
 
 class Square extends Shape{
     constructor(_center, _edgeLength){
-        super(_center);
+        //center and corner angle
+        super(_center, 90);
         this._edgeLength = _edgeLength;
         this.vertices = this.getVertices();
     }
@@ -14,7 +15,6 @@ class Square extends Shape{
             return this.getVertice(i);
         });
     }
-
 
 }
 

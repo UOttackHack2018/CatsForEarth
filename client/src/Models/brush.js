@@ -1,4 +1,4 @@
-
+import Cat from './cat';
 
 class Brush{
     constructor(context){
@@ -30,6 +30,10 @@ class Brush{
             this.drawLine(vertices[i][0], vertices[i][1], 
                      vertices[(i + 1) % 6][0], vertices[(i + 1) % 6][1]);
         }
+    }
+
+    drawImage(img, pos, edge){
+        this.context.drawImage(img, pos[0], pos[1], edge, edge);
     }
 }
 
