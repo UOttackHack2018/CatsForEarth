@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SideNav from "./components/SideNav";
+import Map from './map';
 
 import logo from './logo.svg';
 import './App.css';
@@ -28,20 +29,24 @@ class App extends Component {
         
         <div className="App">
 
-          <div id="content" onClick={this.onSideNavClick.bind(this)}>
-            <button type="button" id="sidebarCollapse" className="btn btn-info navbar-btn">
-              <i className="glyphicon glyphicon-align-left"></i>
-              Toggle Sidebar
-            </button>
-          </div>
-
           <header className="App-header">
+
+            <div id="content">
+              <button onClick={this.onSideNavClick.bind(this)} type="button" id="sidebarCollapse" className="btn btn-info navbar-btn">
+                <i className="glyphicon glyphicon-align-left"></i>
+                Toggle Sidebar
+              </button>
+            </div>
+
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to React</h1>
           </header>
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
+
+
+          <Map /> 
         </div>
       </div>
     );
