@@ -4,6 +4,7 @@ import MapGenerator from './Implementation/mapGenerator';
 import Requests from './Requests/requests';
 
 let hexagons = [];
+let flag = 0;
 let rect;
 
 class Map extends Component {
@@ -11,10 +12,26 @@ class Map extends Component {
   componentDidMount() {
     this.updateCanvas();
   }
+
+  checkDrag(){
+    if(flag == 1){
+      console.log("DRAG");
+      return;
+    }
+    if(flag == 0){
+      console.log("CLICK")
+    }
+  }
+
+  setflag(){
+    flag = 1;
+  }
+  
   selectHex(e){
     let x = e.pageX - rect.left;
     let y = e.pageY - rect.top;
     let req = new Requests();
+    flag = 0;
 
     hexagons.forEach((hex) => {
       let isInside = hex.isInside(x, y);
@@ -51,7 +68,9 @@ class Map extends Component {
       <div className="Map">
         <canvas id="canvasMap"
           ref="canvas"
-          onClick={this.selectHex}
+          onMouseDown={this.selectHex}
+          onMouseMove={this.setflag}
+          onMouseUp={this.checkDrag}
           height="450"
           width="600"
           alt="My Map">

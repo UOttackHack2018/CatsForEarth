@@ -1,11 +1,11 @@
 
 class Hexagon{
     constructor(_center, _edgeLength){
-        this.id = randNum();
+        this.id = randNum(10000);
         this._center = _center;
         this._edgeLength = _edgeLength;
-        this.height = this._edgeLength * 2;
-        this.width = this.height * (3^(1/2)) / 2;
+        this.width = this._edgeLength * 2;
+        this.height = this.width * 3/4;
         this.vertices = this.getVertices();
             
     }
@@ -19,7 +19,7 @@ class Hexagon{
     }
 
     getVertice(i){
-        var degrees = 60 * i + 30;
+        var degrees = 60 * i;
         var rad = degToRad(degrees);
         return [this._center[0] + this._edgeLength * Math.cos(rad),
                 this._center[1] + this._edgeLength * Math.sin(rad)]
@@ -35,9 +35,7 @@ class Hexagon{
                             (x < (xJ - xI) * (y -yI) / (yJ - yI) + xI);
             if(intersect)
                 res = ! res;
-            
         }
-
         return res;
     }
 }
@@ -47,8 +45,8 @@ var degToRad = (angle) => {
     return Math.PI / 180  * angle;
 }
 
-var randNum = () => {
-    return Math.random() * 100;
+var randNum = (range) => {
+    return Math.floor(Math.random() * range);
 }
 
 export default Hexagon;
