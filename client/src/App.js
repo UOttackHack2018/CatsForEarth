@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SideNav from "./components/SideNav";
-import { Activities, BuyCats } from './components';
+import { Activities, BuyCats, Leaderboard } from './components';
 import Map from './map';
 
 import './App.css';
@@ -49,6 +49,9 @@ class App extends Component {
 
           <span className="anchor" id="getCats-section"></span>
           <BuyCats />
+
+          <span className="anchor" id="leaderboard-section"></span>
+          <Leaderboard />
         </div>
       </div>
     );
