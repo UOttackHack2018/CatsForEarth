@@ -3,7 +3,7 @@ import Square from '../Models/square';
 
 class SquareMapGenerator{
     constructor(){
-        this.edgeLength = 60;
+        this.edgeLength = 100;
         this.tiles = this.getSquares();
     }
 
