@@ -7,18 +7,18 @@ class Requests{
     get(url, callback){
         fetch(url, {
             method: 'GET'
-        }).then( response => {
-            callback(response);
+        }).then( response => response.json()).then(json => {
+            callback(json);
         }).catch(error => {
             console.log(error);
         });
 
     }
-    
+
     post(url, callback){
         fetch(url, {
             method: "POST"
-        
+
         }).then(response => {
             callback(response);
         })
