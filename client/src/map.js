@@ -62,13 +62,12 @@ class Map extends Component {
     catGenerator.generateCat(1);
 
     //let mapGenerator = new HexMapGenerator();
-    //let mapGenerator = new SquareMapGenerator();
+    let mapGenerator = new SquareMapGenerator();
 
-    // tiles = mapGenerator.tiles;
+    tiles = mapGenerator.tiles;
   
     tiles.forEach(tile => {
       let img = new Image();
-      //console.log(require('./images/activity-images/'))
       img.src = require("./images/activity-images/recycle-bin.svg"); //"https://mdn.mozillademos.org/files/5397/rhino.jpg";
       img.onload = () => {
         brush.drawImage(img, tile._center, tile._edgeLength)
