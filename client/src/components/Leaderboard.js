@@ -11,7 +11,7 @@ class Leaderboard extends Component {
     }
 
     componentDidMount() {
-        
+
     }
 
 
@@ -54,7 +54,7 @@ class Leaderboard extends Component {
                                 </tbody>
                             </table>
                         </div>
-                    </div>               
+                    </div>
                 </div>
             </div>
         )
