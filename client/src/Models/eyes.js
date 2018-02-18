@@ -9,3 +9,5 @@ class Eyes  extends BodyParts{
     }
 
 }
+
+export default Eyes;

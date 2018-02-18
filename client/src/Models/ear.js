@@ -7,3 +7,5 @@ class Ear extends BodyParts {
         this.color;
     }
 }
+
+export default Ear;

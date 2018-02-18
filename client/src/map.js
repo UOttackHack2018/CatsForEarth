@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Brush from './Models/brush';
-import MapGenerator from './Implementation/mapGenerator';
+import HexMapGenerator from './Implementation/hexMapGenerator';
+import SquareMapGenerator from './Implementation/squareMapGenerator';
+import CatGenerator from './Implementation/catGenerator';
 import Requests from './Requests/requests';
 
-let hexagons = [];
+let tiles = [];
 let flag = 0;
 let rect;
 
@@ -33,15 +35,18 @@ class Map extends Component {
     let req = new Requests();
     flag = 0;
 
-    hexagons.forEach((hex) => {
-      let isInside = hex.isInside(x, y);
-      if(isInside){
-        req.get('10.196.10.220:3000/activities/getActivities', (response) => {
-          console.log(response);
-        });
-        return;
-      }
-    });
+    // tiles.forEach((tile) => {
+    //   let isInside = tile.isInside(x, y);
+    //   if(isInside){
+    //     req.get('10.196.10.220:3000/activities/getActivities', (response) => {
+    //       console.log(response);
+    //     });
+    //     return;
+    //   }
+    // });
+
+    let catGenerator = new CatGenerator();
+    catGenerator.generateCat(1);
 
     console.log(x ,y);
   }
@@ -53,12 +58,15 @@ class Map extends Component {
     rect = canvas.getBoundingClientRect();
 
     let brush = new Brush(ctx);
-    let mapGenerator = new MapGenerator();
+    //let mapGenerator = new MapGenerator();
+    let mapGenerator = new SquareMapGenerator();
 
-    hexagons = mapGenerator.hexagons;
+    tiles = mapGenerator.tiles;
 
-    hexagons.forEach(element => {
-      brush.drawHex(element);
+    tiles.forEach(element => {
+      //brush.drawHex(element);
+      brush.drawRect(element._center[0], element._center[1],
+                      element._edgeLength, element._edgeLength);
     });
 
   }

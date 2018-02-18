@@ -7,3 +7,6 @@ class Heads extends BodyParts {
         this.color;
     }
 } 
+
+
+export default Head;
