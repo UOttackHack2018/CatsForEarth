@@ -43,7 +43,11 @@ class App extends Component {
             <h1>With cats.</h1>
           </header>
           <Map />
+
+          <span className="anchor" id="activities-section"></span>
           <Activities />
+
+          <span className="anchor" id="getCats-section"></span>
           <BuyCats />
         </div>
       </div>
