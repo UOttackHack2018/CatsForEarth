@@ -14,13 +14,7 @@ class CatGenerator {
             return new Cat('moderate');
         }
         
-        return new Cat('common');
-        // return {eyes: new Eyes("average"),
-        //     ears: new Ear('rare'),
-        //     head: new Head("average"),
-        //     nose: new Nose("average"),
-        //     lips: new Lips("average")};
-        
+        return new Cat('common');        
     }
 }
 
