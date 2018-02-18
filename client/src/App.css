@@ -8,6 +8,15 @@
   align-items: stretch;
 }
 
+#content {
+  display: flex;
+}
+
+.menu-margin {
+  transition: 0.5s;
+  margin-left: 250px;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

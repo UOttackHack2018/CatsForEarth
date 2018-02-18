@@ -1,24 +1,36 @@
-#sidebar.inactive {
+#sidebar.active {
+    position: fixed;
     background: #7386D5;
     color: #fff;
-    transition: all 0.3s;
+    transition: all 0.5s;
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
 }
 
-#sidebar.active {
+#sidebar.inactive {
+    position: fixed;
+    max-width: 250px;
     margin-left: -350px;
-    transition: 0.3s;
+    min-height: 100vh;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.5s;
 }
 
 @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
+    #sidebar.inactive {
+        margin-left: -350px;
+        height: 100%;
     }
     #sidebar.active {
         margin-left: 0;
+        min-height: 100%;
     }
+}
+
+#sidebarCollapse {
+    background-color: #52BE80;
 }
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";

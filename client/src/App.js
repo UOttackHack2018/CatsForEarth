@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isNavActive: true
+      isNavActive: false
     }
   }
   
@@ -22,6 +22,7 @@ class App extends Component {
   }
 
   render() {
+    const { isNavActive } = this.state;
     return (
       <div className="wrapper">
         <SideNav isNavActive={this.state.isNavActive} />
@@ -31,9 +32,8 @@ class App extends Component {
           <header className="App-header">
 
             <div id="content">
-              <button onClick={this.onSideNavClick.bind(this)} type="button" id="sidebarCollapse" className="btn btn-info navbar-btn">
-                <i className="glyphicon glyphicon-align-left"></i>
-                Toggle Sidebar
+              <button onClick={this.onSideNavClick.bind(this)} type="button" id="sidebarCollapse" className={isNavActive ? "btn btn-info navbar-btn menu-margin" : "btn btn-info navbar-btn"}>
+                <i className="fas fa-bars"></i>
               </button>
             </div>
 
