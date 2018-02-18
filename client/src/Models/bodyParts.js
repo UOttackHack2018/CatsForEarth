@@ -1,6 +1,14 @@
+import Square from './square';
+import Triangle from './triangle';
+import Circle from './circle';
+
 class BodyParts{
     constuctor(){
         this.shape;
+    }
+
+    genNum(){
+        return Math.random();
     }
 
     setProperties(){
@@ -8,7 +16,7 @@ class BodyParts{
             this.shape = new Square()
         }
         else if(this.type == "moderate"){
-            if(genNum() < 0.5)
+            if(this.genNum() < 0.5)
                 this.shape = new Triangle();
             else
                 this.shape = new Circle();
@@ -18,3 +26,5 @@ class BodyParts{
         }
     }
 }
+
+export default BodyParts

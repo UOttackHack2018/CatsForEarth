@@ -1,3 +1,5 @@
+import BodyParts from './bodyParts'
+
 class Lips extends BodyParts{
     constructor(type) {
         super();

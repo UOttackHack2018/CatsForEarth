@@ -2,7 +2,7 @@ import Eyes from './eyes'
 import Lips from './lips';
 import Head from './head';
 import Nose from './nose';
-import Ear from './ear';
+import Ears from './ear';
 
 class Cat{
     constructor(rarity){
@@ -11,7 +11,7 @@ class Cat{
         this.nose;
         this.head;
         this.mouth;
-        this.ear;
+        this.ears;
 
         this.createCat();
     }

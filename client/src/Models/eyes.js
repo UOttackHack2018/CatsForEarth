@@ -1,3 +1,5 @@
+import BodyParts from './bodyParts'
+
 class Eyes  extends BodyParts{
     constructor(eyesType) {
         super();

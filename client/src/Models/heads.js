@@ -1,4 +1,6 @@
-class Heads extends BodyParts {
+import BodyParts from './bodyParts'
+
+class Head extends BodyParts {
     constructor(type) {
         super();
         this.type = type;

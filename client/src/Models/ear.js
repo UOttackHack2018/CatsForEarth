@@ -1,4 +1,6 @@
-class Ear extends BodyParts {
+import BodyParts from './bodyParts'
+
+class Ears extends BodyParts {
     constructor(type) {
         super();
         this.type = type;
@@ -8,4 +10,4 @@ class Ear extends BodyParts {
     }
 }
 
-export default Ear;
+export default Ears;

@@ -6,7 +6,7 @@ class CatGenerator {
     }
     
     generateCat(likelyhood) {
-        var x = numGen();
+        var x = this.numGen();
         if ( x <= 5 * likelyhood){
             return new Cat('rare')
         }
