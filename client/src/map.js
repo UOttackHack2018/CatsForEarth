@@ -28,22 +28,22 @@ class Map extends Component {
   setflag(){
     flag = 1;
   }
-  
+
   selectHex(e){
     let x = e.pageX - rect.left;
     let y = e.pageY - rect.top;
     let req = new Requests();
     flag = 0;
 
-    // tiles.forEach((tile) => {
-    //   let isInside = tile.isInside(x, y);
-    //   if(isInside){
-    //     req.get('10.196.10.220:3000/activities/getActivities', (response) => {
-    //       console.log(response);
-    //     });
-    //     return;
-    //   }
-    // });
+     tiles.forEach((tile) => {
+       let isInside = tile.isInside(x, y);
+       if(isInside){
+         req.get('http://localhost:3001/activities/getActivities', (response) => {
+           console.log(response);
+         });
+         return;
+       }
+     });
 
     let catGenerator = new CatGenerator();
     catGenerator.generateCat(1);

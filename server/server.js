@@ -16,6 +16,12 @@ mongoose.connection.on('error', console.error.bind(console, 'connection error:')
 
 app.use(bodyParser.json());
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.get('/activities/getactivities', (req, res) => {
   Activities.find({ }, (err, activities) => {
     if (err) {
@@ -81,8 +87,11 @@ app.get('/users/leaderboard', (req, res) => {
   Users.find({ }).
   sort({ points: -1 }).
   limit(10).
+  select('username points').
   exec( (err, users) => {
-    //TODO: return username-list points
+    if (err) {
+      console.error(err);
+    }
     res.send(users);
   });
 });
@@ -148,4 +157,4 @@ app.post('/users/adduser', (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log('Server ready'));
+app.listen(3001, () => console.log('Server ready'));
