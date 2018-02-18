@@ -6,6 +6,10 @@ var Users = require('./db.js');
 
 var app = express();
 
+mongoose.connect(url);
+
+mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
+
 app.use(bodyParser.json());
 
 app.get('/getuser', (req, res) => {
@@ -36,7 +40,12 @@ app.get('/getpoints', (req, res) => {
 });
 
 app.get('/leaderboard', (req, res) => {
-  
+  Users.find({}).
+  sort({ points: -1 }).
+  limit(10).
+  exec( (err, users) => {
+    res.send(users);
+  });
 });
 
 app.post('/addcat', (req, res) => {
@@ -70,7 +79,7 @@ app.put('/updatepoints', (req, res) => {
 });
 
 //TODO: test this!
-app.put('/adduser' (req, res) => {
+app.put('/adduser', (req, res) => {
   Users.insertOne({
     'username': req.query.username,
     'password': req.query.password,

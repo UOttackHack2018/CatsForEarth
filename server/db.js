@@ -15,8 +15,4 @@ var userSchema = new Schema({
 
 var Users = mongoose.model('user', userSchema);
 
-mongoose.connect(url);
-
-mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
-
 module.exports = Users;
