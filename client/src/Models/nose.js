@@ -1,8 +1,9 @@
-class Nose {
-    constructor(noseType, height, width, color) {
-        this.noseType = noseType;
-        this.height = height;
-        this.width = width;
-        this.color = color;
+class Nose extends BodyParts {
+    constructor(type) {
+        super();
+        this.type = type;
+        this.height;
+        this.width;
+        this.color;
     }
 }

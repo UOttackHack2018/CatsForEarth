@@ -1,8 +1,11 @@
-class Eyes {
-    constructor(eyesType, height, width, color) {
-        this.eyesType = eyesType;
-        this.height = height;
-        this.width = width;
-        this.color = color;
+class Eyes  extends BodyParts{
+    constructor(eyesType) {
+        super();
+        this.type = eyesType;
+        this.height;
+        this.width;
+        this.color;
+        
     }
+
 }
