@@ -47,7 +47,7 @@ class Leaderboard extends Component {
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">First</th>
+                                        <th scope="col">User</th>
                                         <th scope="col">Points</th>
                                         
                                     </tr>
