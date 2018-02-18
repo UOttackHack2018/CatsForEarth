@@ -1,0 +1,20 @@
+.green-container {
+    width: 100%;
+    background-color: #52BE80;
+  }
+
+.green-inner-container {
+    width: 85%;
+    margin: 2em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  div.green-container p {
+    color: #fff;
+  }
