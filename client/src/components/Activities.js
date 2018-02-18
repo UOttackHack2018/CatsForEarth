@@ -16,6 +16,22 @@ export const Activities = () => {
                     All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
                     All your activities are listed in here. All your activities are listed in here. All your activities are listed in here.
                     </p>
+                    <p>All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here.
+                    </p>
+                    <p>All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here. 
+                    All your activities are listed in here. All your activities are listed in here. All your activities are listed in here.
+                    </p>
                 </div>
             </div>
         </div>
