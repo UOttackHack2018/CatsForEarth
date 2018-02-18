@@ -151,4 +151,4 @@ app.post('/users/adduser', (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log('Server ready'));
+app.listen(3001, () => console.log('Server ready'));
