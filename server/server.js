@@ -81,8 +81,11 @@ app.get('/users/leaderboard', (req, res) => {
   Users.find({ }).
   sort({ points: -1 }).
   limit(10).
+  select('username points').
   exec( (err, users) => {
-    //TODO: return username-list points
+    if (err) {
+      console.error(err);
+    }
     res.send(users);
   });
 });
