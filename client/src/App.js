@@ -26,7 +26,7 @@ class App extends Component {
     const { isNavActive } = this.state;
     return (
       <div className="wrapper">
-        <SideNav isNavActive={this.state.isNavActive} />
+        <SideNav isNavActive={this.state.isNavActive} onSideNavClick={this.onSideNavClick.bind(this)} />
         
         <div className="App">
           <span id="home-section"></span>
@@ -39,7 +39,7 @@ class App extends Component {
             </div>
 
             <h1>CATS FOR EARTH</h1>
-            <h3>Building a greener city. With cats.</h3>
+            <h3>Building a greener community. With cats.</h3>
           </header>
           <span className="anchor" id="home-section"></span>
           <Home/>

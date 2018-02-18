@@ -11,7 +11,7 @@ export const BuyCats = () => {
                     <div className="an-activity">
                         <img className="activity-image" src={require("../images/loot-boxes/red-gift.svg")} alt="skill-pic" />
                         <h2>Common</h2>
-                        <p>Get just a common cat</p>
+                        <p>Get a common cat</p>
                     </div>
 
                     <div className="an-activity">

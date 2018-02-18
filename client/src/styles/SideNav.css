@@ -58,6 +58,15 @@ a, a:hover, a:focus {
 #sidebar .sidebar-header {
     padding: 20px;
     background: #6d7fcc;
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar .sidebar-header p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 30px;
 }
 
 #sidebar ul.components {
