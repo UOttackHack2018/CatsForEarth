@@ -17,6 +17,7 @@ class Leaderboard extends Component {
             console.log(response);
             this.setState({users: response});
         })
+
     }
 
     renderLeaderboard() {
@@ -67,7 +68,7 @@ class Leaderboard extends Component {
                                 </tbody>
                             </table>
                         </div>
-                    </div>               
+                    </div>
                 </div>
             </div>
         )
