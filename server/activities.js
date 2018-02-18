@@ -3,20 +3,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var activitySchema = new Schema({
+  id: Number,
   location: String,
   activityType: String,
-  
-
-
-  username: String,
-  password: String,
-  //TODO: add price
-  cats: [{ headId: Number, earsId: Number, name: String }],
-  activities: [{ location: String, activityType: String, time: String, duration: Number, points: Number }],
+  duration: Number,
   points: Number
-  //TODO: add useable points
-});
+}, { collection: 'activities'});
 
-var Activities = mongoose.model('activity', activitySchema, 'activities');
+var Activities = mongoose.model('activity', activitySchema);
 
 module.exports = Activities;

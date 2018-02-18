@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var Users = require('./db.js');
+var Activities = require('./activities.js');
 
 var app = express();
 
@@ -15,7 +16,41 @@ mongoose.connection.on('error', console.error.bind(console, 'connection error:')
 
 app.use(bodyParser.json());
 
-app.get('/getuser', (req, res) => {
+app.get('/activities/getactivities', (req, res) => {
+  Activities.find({ }, (err, activities) => {
+    if (err) {
+      console.error(err);
+    }
+    res.send(activities);
+  });
+});
+
+app.get('/activities/getactivity', (req, res) => {
+  Activities.find({ 'id': req.query.id }, (err, activity) => {
+    if (err) {
+      console.error(err);
+    }
+    res.send(activity);
+  });
+});
+
+app.post('/activities/addactivity', (req, res) => {
+  Activities.create({
+    'location': req.query.location,
+    'activityType': req.query.activityType,
+    'duration': req.query.duration,
+    'points': req.query.points
+  }, (err, activity) => {
+    if (err) {
+      console.error(err);
+    }
+    res.send(activity);
+  });
+});
+
+
+
+app.get('/users/getuser', (req, res) => {
   Users.findOne({ 'username': req.query.username }, (err, user) => {
     if (err) {
       console.error(err);
@@ -24,7 +59,7 @@ app.get('/getuser', (req, res) => {
   });
 });
 
-app.get('/getcats', (req, res) => {
+app.get('/users/getcats', (req, res) => {
   Users.findOne({ 'username': req.query.username }, 'cats', (err, user) => {
     if (err) {
       console.error(err);
@@ -33,7 +68,7 @@ app.get('/getcats', (req, res) => {
   });
 });
 
-app.get('/getpoints', (req, res) => {
+app.get('/users/getpoints', (req, res) => {
   Users.findOne({ 'username': req.query.username }, 'points', (err, user) => {
     if (err) {
       console.error(err);
@@ -42,8 +77,8 @@ app.get('/getpoints', (req, res) => {
   });
 });
 
-app.get('/leaderboard', (req, res) => {
-  Users.find({}).
+app.get('/users/leaderboard', (req, res) => {
+  Users.find({ }).
   sort({ points: -1 }).
   limit(10).
   exec( (err, users) => {
@@ -52,7 +87,7 @@ app.get('/leaderboard', (req, res) => {
   });
 });
 
-app.post('/addcat', (req, res) => {
+app.post('/users/addcat', (req, res) => {
   Users.findOne({ 'username': req.query.username }, 'cats', (err, user) => {
     if (err) {
       console.error(err);
@@ -67,7 +102,7 @@ app.post('/addcat', (req, res) => {
   });
 });
 
-app.post('/addactivity', (req, res) => {
+app.post('/users/addactivity', (req, res) => {
   Users.findOne({ 'username': req.query.username }, 'activities', (err, user) => {
     if (err) {
       console.error(err);
@@ -82,7 +117,7 @@ app.post('/addactivity', (req, res) => {
   });
 });
 
-app.put('/updatepoints', (req, res) => {
+app.put('/users/updatepoints', (req, res) => {
   Users.findOne({ 'username': req.query.username }, 'points', (err, user) => {
     if (err) {
       console.error(err);
@@ -98,8 +133,8 @@ app.put('/updatepoints', (req, res) => {
 });
 
 //TODO: test this!
-app.post('/adduser', (req, res) => {
-  Users.insertOne({
+app.post('/users/adduser', (req, res) => {
+  Users.create({
     'username': req.query.username,
     'password': req.query.password,
     'cats': req.query.cats,
