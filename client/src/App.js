@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SideNav from "./components/SideNav";
-import { Activities, BuyCats, Leaderboard } from './components';
+import { Activities, BuyCats, Leaderboard, Home } from './components';
 import Map from './map';
 
 import './App.css';
@@ -29,7 +29,7 @@ class App extends Component {
         <SideNav isNavActive={this.state.isNavActive} />
         
         <div className="App">
-
+          <span id="home-section"></span>
           <header className="App-header">
 
             <div id="content">
@@ -42,7 +42,8 @@ class App extends Component {
             <h1>Building a greener city.</h1>
             <h1>With cats.</h1>
           </header>
-          <Map />
+          <span className="anchor" id="home-section"></span>
+          <Home/>
 
           <span className="anchor" id="activities-section"></span>
           <Activities />
