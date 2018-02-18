@@ -4,14 +4,18 @@ class Hexagon{
     constructor(_center, _edgeLength){
         this._center = _center;
         this._edgeLength = _edgeLength;
+        this.height = this._edgeLength * 2;
+        this.width = this.height * (3^(1/2)) / 2;
+        this.vertices = this.getVertices();
+            
+    }
 
-        this.vertices = () => {
-            let arr = [1, 2, 3, 4, 5, 6];
+    getVertices(){
+        let arr = [1, 2, 3, 4, 5, 6];
 
-            return arr.forEach((vertice, i) =>{
-                this.getVertice(i);
-            })
-        }
+        return arr.map((vertice, i) =>{
+            return this.getVertice(i);
+        })
     }
 
     getVertice(i){
