@@ -33,14 +33,14 @@ class App extends Component {
           <header className="App-header">
 
             <div id="content">
-              <button onClick={this.onSideNavClick.bind(this)} type="button" id="sidebarCollapse" className={isNavActive ? "btn btn-info navbar-btn menu-button-fixed menu-margin" : "btn btn-info navbar-btn menu-button-fixed"}>
+              <button onClick={this.onSideNavClick.bind(this)} type="button" id="sidebarCollapse" className={isNavActive ? "btn btn-dark navbar-btn menu-button-fixed menu-margin" : "btn btn-dark navbar-btn menu-button-fixed"}>
                 <i className="fas fa-bars"></i>
               </button>
             </div>
 
             
-            <h1 className="App-title">Building a greener city</h1>
-            <h1 className="App-title">One cat at a time</h1>
+            <h1>Building a greener city.</h1>
+            <h1>With cats.</h1>
           </header>
           <Map />
           <Activities />

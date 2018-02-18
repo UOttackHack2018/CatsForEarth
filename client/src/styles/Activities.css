@@ -8,13 +8,38 @@
     margin: 2em auto;
     font-size: 20px;
     line-height: 30px;
-    text-align: justify;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  div.green-container p {
-    color: #fff;
-  }
+div.green-inner-container h1 {
+  margin-top: 1em;
+}
+
+div.green-container p {
+  color: #fff;
+}
+
+.activity-inner-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  align-items: flex-start;
+}
+
+.an-activity {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0.5em;
+}
+
+.activity-image {
+  width: 25vh;
+  height: 25vh;
+}
