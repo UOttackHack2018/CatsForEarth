@@ -20,8 +20,16 @@ class Brush{
     drawLine(sX, sY, eX, eY){
         this.context.beginPath();
         this.context.moveTo(sX, sY);
-        this.lineTo(eX, eY);
+        this.context.lineTo(eX, eY);
         this.context.stroke();
+    }
+
+    drawHex(hex){
+        let vertices = hex.vertices;
+        for(let i = 0; i < 6; i++){
+            this.drawLine(vertices[i][0], vertices[i][1], 
+                     vertices[(i + 1) % 6][0], vertices[(i + 1) % 6][1]);
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Brush from './Models/brush';
-
+import MapGenerator from './Implementation/mapGenerator';
 
 class Map extends Component {
 
@@ -9,8 +9,14 @@ class Map extends Component {
 }
   updateCanvas() {
     const ctx = this.refs.canvas.getContext('2d');
-    let brush = new Brush(ctx);
-    brush.drawRect(100, 100, 50 , 50);
+    let brush = new Brush(this.context);
+      let mapGenerator = new MapGenerator();
+
+      mapGenerator.hexagons.forEach(element => {
+        brush.drawHex(element);
+      });
+      //brush.drawRect(100, 100, 50 , 50);
+
   }
 
   render() {
