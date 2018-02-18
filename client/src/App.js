@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import SideNav from "./components/SideNav";
 import Map from './map';
-<<<<<<< HEAD
-
-=======
->>>>>>> Can now generate hex map.
 import logo from './logo.svg';
 import './App.css';
 
