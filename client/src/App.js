@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SideNav from "./components/SideNav";
-import { Activities } from './components';
+import { Activities, BuyCats } from './components';
 import Map from './map';
 
 import './App.css';
@@ -44,6 +44,7 @@ class App extends Component {
           </header>
           <Map />
           <Activities />
+          <BuyCats />
         </div>
       </div>
     );
