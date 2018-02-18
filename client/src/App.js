@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import SideNav from "./components/SideNav";
+import { Activities } from './components';
 import Map from './map';
-import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
@@ -32,15 +33,17 @@ class App extends Component {
           <header className="App-header">
 
             <div id="content">
-              <button onClick={this.onSideNavClick.bind(this)} type="button" id="sidebarCollapse" className={isNavActive ? "btn btn-info navbar-btn menu-margin" : "btn btn-info navbar-btn"}>
+              <button onClick={this.onSideNavClick.bind(this)} type="button" id="sidebarCollapse" className={isNavActive ? "btn btn-info navbar-btn menu-button-fixed menu-margin" : "btn btn-info navbar-btn menu-button-fixed"}>
                 <i className="fas fa-bars"></i>
               </button>
             </div>
 
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
+            
+            <h1 className="App-title">Building a greener city</h1>
+            <h1 className="App-title">One cat at a time</h1>
           </header>
           <Map />
+          <Activities />
         </div>
       </div>
     );
