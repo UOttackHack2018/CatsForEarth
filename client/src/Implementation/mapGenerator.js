@@ -17,7 +17,7 @@ class MapGenerator{
         let yOffset = xHex.height;
 
         for(let x = 0; x < 3 * xOffset; x += xOffset){
-            for(let y = 0; y < 2 * yOffset; y += yOffset){
+            for(let y = 0; y < 1 * yOffset; y += yOffset){
                 let hex = new Hexagon([x, y], this.edgeLength);
                 console.log("Hexagon:", hex);
                 res.push(hex);

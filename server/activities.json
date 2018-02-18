@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5a88f6e30851ffaac53d6575"},"location":"Ottawa","activityType":"Biking","duration":30.0,"points":1000.0,"id":1.0}
+{"_id":{"$oid":"5a88fb566ca9ec47c9b25dcd"},"location":"Ottawa","activityType":"Biking","duration":15,"points":500,"__v":0,"id":2.0}
