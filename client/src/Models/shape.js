@@ -1,12 +1,13 @@
 
 
 class Shape{
-    constructor(_center){
+    constructor(_center, cornerAngle){
         this._center = _center;
+        this.cornerAngle = cornerAngle;
     }
 
     getVertice(i){
-        var degrees = 60 * i;
+        var degrees = this.cornerAngle * i;
         var rad = this.degToRad(degrees);
         return [this._center[0] + this._edgeLength * Math.cos(rad),
                 this._center[1] + this._edgeLength * Math.sin(rad)]

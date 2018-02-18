@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SideNav from "./components/SideNav";
-import { Activities } from './components';
+import { Activities, BuyCats, Leaderboard } from './components';
 import Map from './map';
 
 import './App.css';
@@ -43,7 +43,15 @@ class App extends Component {
             <h1>With cats.</h1>
           </header>
           <Map />
+
+          <span className="anchor" id="activities-section"></span>
           <Activities />
+
+          <span className="anchor" id="getCats-section"></span>
+          <BuyCats />
+
+          <span className="anchor" id="leaderboard-section"></span>
+          <Leaderboard />
         </div>
       </div>
     );

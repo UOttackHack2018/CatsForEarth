@@ -16,10 +16,10 @@ class SideNav extends Component {
                     </div>
 
                     <ul className="list-unstyled components">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Activities</a></li>
-                        <li><a href="#">Get Cats</a></li>
-                        <li><a href="#">Leaderboard</a></li>
+                        <li><a href="#home-section">Home</a></li>
+                        <li><a href="#activities-section">Activities</a></li>
+                        <li><a href="#getCats-section">Buy A Cat</a></li>
+                        <li><a href="#leaderboard-section">Leaderboard</a></li>
                     </ul>
                 </nav>
             </div>

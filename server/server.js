@@ -65,6 +65,13 @@ app.get('/users/getuser', (req, res) => {
   });
 });
 
+app.get('/users/getusers', (req, res) => {
+  Users.find({ }, (err, users) => {
+    //TODO: add error-checking
+    res.send(users);
+  });
+});
+
 app.get('/users/getcats', (req, res) => {
   Users.findOne({ 'username': req.query.username }, 'cats', (err, user) => {
     if (err) {
