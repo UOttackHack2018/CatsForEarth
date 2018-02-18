@@ -6,6 +6,9 @@ var Users = require('./db.js');
 
 var app = express();
 
+//MongoDB url
+var url = 'mongodb://localhost:27017/CatsforEarth';
+
 mongoose.connect(url);
 
 mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
@@ -44,6 +47,7 @@ app.get('/leaderboard', (req, res) => {
   sort({ points: -1 }).
   limit(10).
   exec( (err, users) => {
+    //TODO: return username-list points
     res.send(users);
   });
 });
@@ -54,6 +58,21 @@ app.post('/addcat', (req, res) => {
       console.error(err);
     }
     user.cats.push({ 'headId': req.query.headId, 'earsId': req.query.earsId, 'name': req.query.name });
+    user.save( (err, updatedUser) => {
+      if (err) {
+        console.error(err);
+      }
+      res.send(updatedUser);
+    });
+  });
+});
+
+app.post('/addactivity', (req, res) => {
+  Users.findOne({ 'username': req.query.username }, 'activities', (err, user) => {
+    if (err) {
+      console.error(err);
+    }
+    user.activities.push({ 'location': req.query.location, 'activityType': req.query.activityType, 'time': req.query.time, 'duration': req.query.duration, 'points': req.query.points });
     user.save( (err, updatedUser) => {
       if (err) {
         console.error(err);
@@ -79,7 +98,7 @@ app.put('/updatepoints', (req, res) => {
 });
 
 //TODO: test this!
-app.put('/adduser', (req, res) => {
+app.post('/adduser', (req, res) => {
   Users.insertOne({
     'username': req.query.username,
     'password': req.query.password,

@@ -1,0 +1,11 @@
+{"_id":{"$oid":"5a88a8ca81b8087220b7b602"},"username":"admin","password":"admin","cats":[{"headId":1.0,"earsId":1.0,"name":"Ramo"},{"headId":2,"earsId":2,"name":"test","_id":{"$oid":"5a88bdf917813046da8bb4a2"}}],"activities":[{"location":"Ottawa","activityType":"biking","time":"2018-01-27","duration":30.0,"points":1000.0}],"points":1500,"__v":2}
+{"_id":{"$oid":"5a88d57081b8087220b7b603"},"username":"Mat","password":"test","cats":[],"activities":[],"points":1000.0}
+{"_id":{"$oid":"5a88d5a681b8087220b7b604"},"username":"Albert","password":"test2","cats":[],"activities":[],"points":2000.0}
+{"_id":{"$oid":"5a88d5c281b8087220b7b605"},"username":"Sarah","password":"random","cats":[],"activities":[],"points":500.0}
+{"_id":{"$oid":"5a88d64981b8087220b7b606"},"username":"Michelle","password":"mouse","cats":[],"activities":[],"points":1500.0}
+{"_id":{"$oid":"5a88d66481b8087220b7b607"},"username":"Michael","password":"randommm","cats":[],"activities":[],"points":0.0}
+{"_id":{"$oid":"5a88d71e81b8087220b7b608"},"username":"Theo","password":"penandpencil","cats":[],"activities":[],"points":0.0}
+{"_id":{"$oid":"5a88d7c081b8087220b7b609"},"username":"coolsurfer","password":"water","cats":[],"activities":[],"points":0.0}
+{"_id":{"$oid":"5a88d82981b8087220b7b60a"},"username":"catCollector","password":"coffee","cats":[],"activities":[],"points":500.0}
+{"_id":{"$oid":"5a88d8ff81b8087220b7b60b"},"username":"mateo","password":"mateo","cats":[],"activities":[],"points":0.0}
+{"_id":{"$oid":"5a88da0a81b8087220b7b60c"},"username":"catmaster","password":"violin","cats":[],"activities":[],"points":0.0}
