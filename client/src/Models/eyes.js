@@ -1,9 +1,9 @@
 import BodyParts from './bodyParts'
 
 class Eyes  extends BodyParts{
-    constructor(eyesType) {
-        super();
-        this.type = eyesType;
+    constructor(rarity) {
+        super(rarity);
+        this.rarity = rarity;
         this.height;
         this.width;
         this.color;

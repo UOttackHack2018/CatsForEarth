@@ -17,9 +17,11 @@ class Cat{
     }
 
     createCat(){
-        if(this.rarity == 'rare'){
-            this.eyes = new Eyes('rare')
-        }
+        this.eyes = new Eyes(this.rarity);
+        this.head = new Head(this.rarity);
+        this.mouth = new Mouth(this.rarity);
+        this.lips = new Mouth(this.rarity);
+        this.ears = new Ears(this.rarity);
     }
 }
 
