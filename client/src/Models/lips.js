@@ -1,8 +1,9 @@
-class Lips {
-    constructor(lipType, height, width, color) {
-        this.lipType = lipType;
-        this.height = height;
-        this.width = width;
-        this.color = color;
+class Lips extends BodyParts{
+    constructor(type) {
+        super();
+        this.type = type;
+        this.height;
+        this.width;
+        this.color;
     }
 }
